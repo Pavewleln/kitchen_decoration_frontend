@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.container {
+    max-width: 1400px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+body.active {
+    overflow: hidden;
+}
+h1{
+    font-size: 68px;
+    font-weight: 700;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 44px;
+    margin: 20px 10px 30px 10px;
+    text-align: center;
+    font-weight: 500;
+}
+section{
+    padding:10px;
+}
+.end__section {
+    margin-bottom: 50px;
+}
+
+.no__visible{
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+.input__form-button{
+    padding: 15px 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+}
+.input__form-button:hover {
+    background-color: #ff6600;
+}
+
+.input__block {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 10px 0px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.input__block p {
+    margin-bottom: 10px;
+}
+
+.input__block input {
+    border: 1px solid rgb(241, 193, 102);
+    border-radius: 5px;
+    padding: 7px 10px;
+}
+.button__white{
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid orange;
+    border-radius: 5px;
+    color: orange;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navigations {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.navigations button {
+    margin: 0 10px;
+}
+  
+.button__white {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid orange;
+    border-radius: 5px;
+    color: orange;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button__orange {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.button__white:hover {
+    background-color: orange;
+    color: #fff;
+}
+  
+.button__orange:hover {
+    background-color: #ff6600;
+}
+  
+.button__white:focus,
+.button__orange:focus {
+    outline: none;
+}   
+.button__white:disabled,
+.button__orange:disabled {
+    opacity: 0.5;
+} 
+
+@media (max-width: 768px) {
+    h2{
+        font-size: 34px;
+    }
+    h1{
+        font-size: 42px;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 390px) {
+}

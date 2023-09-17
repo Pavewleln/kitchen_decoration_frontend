@@ -1,0 +1,482 @@
+/* Header */
+
+header {
+    color: #fff;
+    font-weight: 500;
+}
+
+.nav__link {
+    font-size: 24px;
+    margin: 10px 20px;
+    transition: all 1s ease;
+    width: 150px;
+    text-align: center;
+}
+.nav__link:hover {
+    opacity: 0.5;
+}
+
+.desktop {
+    position: absolute;
+    top: 5%;
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* burger */
+.menu__btn {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top:30px;
+    right: 30px;
+	width: 25px;
+	height: 16px;
+	z-index:3;
+    /* background-color: white; */
+}
+.menu__btn .menu__btn-lines, .menu__btn:after, .menu__btn:before{
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: white;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+.menu__btn .menu__btn-lines{
+    top: 21px;
+}
+.menu__btn:after, .menu__btn:before{
+    content: '';
+}
+.menu__btn:after{
+    bottom: 0px;
+}
+.menu__btn:before{
+    top: 5px;
+}
+.menu__btn.active span{
+    display: none;
+}
+.menu__btn.active:before{
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);  
+}
+.menu__btn.active:after{
+    top: 50%;
+    transform: translate(0%, -50%) rotate(-45deg); 
+}
+
+.menu__list{
+    position: fixed;
+    z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+	transform: translateX(-100%);
+	transition: transform 0.5s;
+}
+.menu__list.active {
+	transform: translateX(0);
+}
+
+/* burger */
+@media (max-width: 990px) {
+    header{
+        top: 15%;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .nav__link{
+        margin:10px;
+        line-height: 1.3;
+    }
+    .menu__btn{
+        display: block;
+    }
+}
+/* Header */
+
+/* Home */
+  
+.home__bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/img/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+.home__bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+  
+.home h1 {
+    margin-bottom: 20px;
+}
+/* Home */
+
+
+
+/* About */
+.about {
+    text-align: center;
+}
+  
+.about__products {
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+.about__products-item {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 10px;
+    background: rgb(241, 193, 102);
+}
+.about__advantages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.about__advantages-item {
+    max-width: 270px;
+    padding: 20px;
+    height: auto;
+}
+.about__advantages-item img {
+    width: 60%;
+}
+.about__advantages-item p {
+    margin-top: 5px;
+}
+.about__materials {
+    margin-top: 20px;
+}
+
+@media (max-width:576px) {
+    .about__products-item {
+        padding: 7px 12px;
+        margin: 4px;
+        font-size: 14px;
+    }
+    .about__advantages-item img {
+        width: 40%;
+    }
+}
+
+/* About */
+
+/* Portfolio */
+.portfolio__gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+  
+.product__item {
+    overflow: hidden;
+    position: relative;
+    margin: 10px;
+    border-radius: 5px;
+    width: 500px;
+    height: 300px;
+}
+  
+.product__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease;
+}
+  
+.product__item:hover img {
+    transform: scale(1.1);
+}
+  
+.product__description {
+    text-align: left;
+    position: absolute;
+    color: white;
+    bottom: 10%;
+    left: 5%;
+    z-index: 1;
+}
+  
+.product__item h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+  
+.product__item p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+@media (max-width: 990px) {
+    .portfolio__gallery {
+        flex-wrap: wrap;
+    }
+    
+    .product__item {
+        /* width: 80%; */
+        height: auto;
+        margin: 10px 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .product__item h3 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+      
+    .product__item p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+  
+/* Portfolio */
+
+
+
+/* Services */
+
+.services__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.services__block{
+    display: none;
+}
+.services__block.visible {
+    display: block;
+}
+
+.services__block h3 {
+    max-width: 500px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.services__container-left h4 {
+    text-align: center;
+    margin: 5px;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.variables {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.variables.inputs{
+    flex-direction: column;
+}
+
+/* Стилизация checkbox */
+/* Стилизация радиокнопки */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    position: relative; /* Добавляем позиционирование для псевдоэлемента */
+    background-color: rgb(245, 234, 200);
+}
+  
+/* Стилизация кружка внутри радиокнопки */
+input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px; /* Задаем размер кружка */
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(245, 234, 200); /* Задаем цвет кружка */
+}
+  
+/* Стилизация кружка внутри радиокнопки при выборе */
+input[type="radio"]:checked::before {
+    background-color: rgb(241, 193, 102);
+}
+
+.variable__item {
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 10px;
+    width: 250px;
+    height: 170px;
+    font-weight: 100;
+    font-size: 16px;
+    padding: 10px;
+}
+.variable__item.inputs{
+    max-width: 100%;
+    height: 5px;
+}
+  
+.variable__item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+/* Стилизация описания checkbox */
+.variable__description {
+    display: flex;
+    align-items: center;
+}
+  
+.variable__description p {
+    margin-left: 5px;
+}
+
+.step{
+    display: none;
+}
+.step.visible{
+    display: block;
+}
+.image__description{
+    max-width: 500px;
+    width: 100%;
+}
+
+.final{
+    max-width: 500px;
+}
+
+.result__block{
+    text-align: center;
+}
+
+.final__images{
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 990px) {
+    .services__container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 576px) {
+    .services__container-left img {
+        max-width: 400px;
+    }
+    /* .image__description{
+        max-width: 400px;
+    } */
+}
+@media (max-width: 390px) {
+    .services__container-left img {
+        max-width: 300px;
+    }
+}
+
+/* Services */
+
+
+
+/* Contacts */
+.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+  
+.contacts__container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.contacts__title{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+  
+.contacts hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+  
+.contacts p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+  
+.contacts b {
+    font-weight: bold;
+}
+@media (max-width: 990px) {
+    .contacts{
+        flex-direction: column;
+    }
+}
+/* Contacts */
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+/* Footer */

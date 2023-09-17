@@ -1,0 +1,38 @@
+/* Обнуление стилей */
+body, div, p, span, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, form, input, textarea, button, select, option, table, th, td, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+  
+/* Сброс отступов */
+body {
+  line-height: 1;
+}
+
+/* Удаление декоративных стилей ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Сброс стилей списков */
+ul, ol {
+  list-style: none;
+}
+
+/* Сброс стилей таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Сброс стилей форм */
+button, input, select, textarea {
+  outline: none;
+}
+  
+  /* Дополнительные стили, если необходимо */
