@@ -1,3 +1,4 @@
+const URL = "https://kitchen-decoration.onrender.com/"
 const KITCHEN = 'kitchen'
 const CUPBOARD = 'cupboard'
 const SUBJECT = 'subject'
@@ -108,7 +109,7 @@ final.addEventListener("submit", async (event) => {
     formData.phone = document.getElementById("phoneNumber").value;
 
     try {
-        await fetch("http://localhost:4000/application", {
+        await fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
