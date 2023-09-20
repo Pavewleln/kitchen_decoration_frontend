@@ -105,7 +105,6 @@ connection.addEventListener('change', (e) => {
 final.addEventListener("submit", async (event) => {
     event.preventDefault(); // Предотвращаем отправку формы
     formData.name = document.getElementById("firstName").value;
-    formData.surname = document.getElementById("lastName").value;
     formData.phone = document.getElementById("phoneNumber").value;
 
     try {
