@@ -451,6 +451,12 @@ input[type="radio"]:checked::before {
     font-weight: 500;
     margin-bottom: 20px;
 }
+.contacts a {
+    text-decoration: none;
+}
+.contacts a:hover{
+    text-decoration: underline;
+}
   
 .contacts hr {
     border: none;
