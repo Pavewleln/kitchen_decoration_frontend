@@ -1,5 +1,5 @@
-const URL = "http://localhost:4000/"
-// const URL = "https://kitchen-decoration.onrender.com/"
+// const URL = "http://localhost:4000/"
+const URL = "https://kitchen-decoration.onrender.com/"
 const KITCHEN = 'kitchen'
 const CUPBOARD = 'cupboard'
 const SUBJECT = 'subject'
