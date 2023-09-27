@@ -133,7 +133,14 @@ section{
 .button__white:disabled,
 .button__orange:disabled {
     opacity: 0.5;
-} 
+}
+
+.successfully{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (max-width: 768px) {
     h2{

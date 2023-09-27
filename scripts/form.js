@@ -1,12 +1,10 @@
-// const URL = "http://localhost:4000/"
-const URL = "https://kitchen-decoration.onrender.com/"
+const URL = "http://localhost:4000/"
+// const URL = "https://kitchen-decoration.onrender.com/"
 const KITCHEN = 'kitchen'
 const CUPBOARD = 'cupboard'
 const SUBJECT = 'subject'
 const CONNECTION = 'connection'
 const FINAL = 'final'
-const SUCCESSFULLY = 'successfully'
-const FAILED = 'failed'
 const excludedSubjects = [KITCHEN, CUPBOARD, CONNECTION, FINAL, SUBJECT];
 
 let formData = {
@@ -116,9 +114,9 @@ final.addEventListener("submit", async (event) => {
             },
             body: JSON.stringify(formData)
         })
-        showServiceBlock(SUCCESSFULLY, null)
+        window.location.replace("../access.html");
     } catch (err) {
-        showServiceBlock(FAILED, null)
+        window.location.replace("../access.html");
     } finally {
         disableButton(next, true)
         disableButton(back, true)
