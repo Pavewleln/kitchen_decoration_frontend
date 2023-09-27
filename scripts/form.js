@@ -116,6 +116,9 @@ final.addEventListener("submit", async (event) => {
 
     // Генерируем полный URL, объединяя базовый путь с хостом
     let accessURL = window.location.origin + accessPath;
+
+    // Перенаправляем на access.html
+    window.location.href = "access.html";
     try {
         await fetch(URL, {
             method: "POST",
@@ -124,8 +127,6 @@ final.addEventListener("submit", async (event) => {
             },
             body: JSON.stringify(formData)
         })
-        // Перенаправляем на access.html
-        window.location.replace(accessURL);
     } catch (err) {
     } finally {
         disableButton(next, true)
