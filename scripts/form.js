@@ -105,7 +105,17 @@ final.addEventListener("submit", async (event) => {
     event.preventDefault(); // Предотвращаем отправку формы
     formData.name = document.getElementById("firstName").value;
     formData.phone = document.getElementById("phoneNumber").value;
+    // Получаем текущий путь URL (без хоста)
+    let currentPath = window.location.pathname;
 
+    // Извлекаем базовый путь до последнего слеша
+    let basePath = currentPath.substr(0, currentPath.lastIndexOf("/"));
+
+    // Генерируем полный путь к файлу access.html
+    let accessPath = basePath + "/access.html";
+
+    // Генерируем полный URL, объединяя базовый путь с хостом
+    let accessURL = window.location.origin + accessPath;
     try {
         await fetch(URL, {
             method: "POST",
@@ -114,9 +124,9 @@ final.addEventListener("submit", async (event) => {
             },
             body: JSON.stringify(formData)
         })
-        window.location.replace("../access.html");
+        // Перенаправляем на access.html
+        window.location.replace(accessURL);
     } catch (err) {
-        window.location.replace("../access.html");
     } finally {
         disableButton(next, true)
         disableButton(back, true)
